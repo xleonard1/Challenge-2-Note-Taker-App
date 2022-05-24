@@ -29,4 +29,6 @@ Xavier D. Leonard Jr.
 
  ## Deployement
 
+ Heroku: https://cryptic-plateau-61578.herokuapp.com/notes
+ GitHub: https://github.com/xleonard1/Challenge-2-Note-Taker-App.git
  
