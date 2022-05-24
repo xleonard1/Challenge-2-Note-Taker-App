@@ -3,12 +3,12 @@ const { readFromFile, readAndAppend, writeToFile, readAndDelete } = require('../
 const uuid = require('../helpers/uuid')
 const notes = require('../db/db.json')
 
-router.get('/notes', (req, res) => {
+router.get('/api/notes', (req, res) => {
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
 });
 
 
-router.post('/notes', (req, res) => {
+router.post('/api/notes', (req, res) => {
     console.info(`${req.method} request received to add new Note`);
     const newNote = req.body;
     newNote.id = uuid;
@@ -18,7 +18,7 @@ router.post('/notes', (req, res) => {
 
 });
 
-router.delete('/notes/:id', (req, res) => {
+router.delete('/api/notes/:id', (req, res) => {
    readAndDelete(req.params.id, './db/db.json'); 
    res.json({ok: true })
 })
