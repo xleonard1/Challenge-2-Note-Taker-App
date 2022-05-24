@@ -42,6 +42,7 @@ const readAndDelete = (id, file) => {
           });
 
           writeToFile(file, filteredData);
+          return filteredData
         }
       });
 }
